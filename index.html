@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raghav Gold - Tankarawala</title>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    background: linear-gradient(120deg, #fffaf0, #fff5e6);
+    text-align:center;
+    color:#333;
+}
+
+/* HEADER LOGO */
+.logo{
+    width:160px;
+    margin:25px auto;
+    animation: fadeIn 1s ease-in;
+}
+
+/* BRAND NAME PREMIUM STYLE WITH SHINE */
+.brand-name{
+    font-size:32px;
+    font-weight:bold;
+    display:inline-block;
+    background: linear-gradient(45deg, #b68b2d, #f0c75e); /* logo color match */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(182,139,45,0.6); /* depth / contrast */
+    position: relative;
+    overflow: hidden;
+    margin-bottom:5px;
+}
+
+.brand-name::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-75%;
+    width:50%;
+    height:100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+    0%{ left: -75%; }
+    100%{ left: 125%; }
+}
+
+p{
+    font-size:16px;
+    color:#555;
+    margin-top:0;
+}
+
+/* PRODUCT SECTION */
+.section{
+    background: linear-gradient(145deg, #fff8ed, #fff1d6);
+    padding:30px 20px;
+    margin:20px 12px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(182,139,45,0.15);
+    transition:0.4s;
+}
+.section:hover{
+    transform:translateY(-3px);
+}
+
+.section h3{
+    font-size:22px;
+    color:#b68b2d;
+    margin-bottom:20px;
+    letter-spacing:1px;
+    position:relative;
+}
+.section h3::after{
+    content:''; width:50px; height:3px;
+    background:linear-gradient(to right,#b68b2d,#f0c75e);
+    display:block; margin:8px auto 0; border-radius:2px;
+}
+
+/* PRODUCTS GRID */
+.products{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.products img{
+    width:30vw;
+    max-width:150px;
+    height:auto;
+    border-radius:18px;
+    border:3px solid #b68b2d;
+    object-fit:contain;
+    padding:6px;
+    transition:0.3s;
+    background:white;
+    box-shadow:0 4px 18px rgba(182,139,45,0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine animation for product images */
+.products img::after{
+    content:'';
+    position:absolute;
+    top:0; left:-75%;
+    width:50%; height:100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 2.5s infinite;
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+/* Hover zoom */
+.products img:hover{
+    transform:scale(1.1);
+}
+
+/* ICON BUTTONS */
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#b68b2d,#f0c75e);
+    padding:15px;
+    color:#fff;
+    text-decoration:none;
+    width:60px;
+    height:60px;
+    margin:10px 8px;
+    border-radius:50%;
+    font-size:24px;
+    font-weight:bold;
+    box-shadow:0 6px 16px rgba(182,139,45,0.5);
+    transition:0.3s;
+}
+.btn:hover{
+    transform:scale(1.2);
+    box-shadow:0 8px 22px rgba(182,139,45,0.6);
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float{
+    position:fixed;
+    bottom:18px;
+    right:18px;
+    background:#25d366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    box-shadow:0 6px 12px rgba(182,139,45,0.4);
+    border:2px solid #b68b2d;
+    text-decoration:none;
+    transition:0.3s;
+}
+.whatsapp-float:hover{
+    transform:scale(1.2);
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+@keyframes fadeInUp{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+    .products img{
+        width:40vw;
+        max-width:120px;
+    }
+    .brand-name{
+        font-size:24px;
+    }
+    .section{
+        padding:20px 15px;
+    }
+}
+.contact-name{
+    font-weight: bold;       
+    font-size: 18px;        
+    color:#222222      
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<img src="https://i.ibb.co/kg8MXzs0/logo-png.png" class="logo" alt="Raghav Gold Logo">
+
+<!-- BRAND NAME -->
+<h2 class="brand-name">Raghav Gold - Tankarawala</h2>
+<p><b>Specialist in CZ Nosepin, Bali & Baby Tops</b></p>
+
+<!-- PRODUCTS -->
+<<div class="section">
+    <h3>Our Products</h3>
+    <div class="products">
+        <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw05725e21/images/hi-res/501191OAAAAB01_1.jpg?sw=640&sh=640">
+        <img src="https://www.jiomart.com/images/product/original/rvcilangzo/kyoot-jewels-gold-plated-brass-nosepin-for-women-pack-of-2-product-images-rvcilangzo-0-202207200616.jpg?im=Resize=(1000,1000)">
+        <img src="https://pcchandraindia.com/cdn/shop/files/22K223EGLP1039_1.webp?v=1737024001">
+        <img src="https://i.ibb.co/r28tKYw9/gold-removebg-preview.png">
+		<img src="https://i.ibb.co/HTfJgmN6/Whats-App-Image-2025-12-08-at-12-56-57-PM-removebg-preview.png">
+		<img src="https://i.ibb.co/3yJp4hBk/Whats-App-Image-2025-12-08-at-12-52-28-PM-removebg-preview.png">
+		<img src="https://i.ibb.co/dXhgCN3/Whats-App-Image-2025-12-08-at-12-54-44-PM-removebg-preview.png">
+		<img src="https://i.ibb.co/V0PkbpTK/Whats-App-Image-2025-12-08-at-1-25-24-PM-removebg-preview.png">
+		<img src="https://i.ibb.co/65fX276/Whats-App-Image-2025-12-08-at-1-26-17-PM.jpg">
+		<img src="https://i.ibb.co/Y788Cvyr/Whats-App-Image-2025-12-08-at-1-26-59-PM.jpg">
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+    <h3>Contact Us</h3>
+    <p><span class="contact-name">Nilay Ranpura:</span> 8905299299</p>
+    <a class="btn" href="https://wa.me/8905299299" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a class="btn" href="https://instagram.com/raghav.gold" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a class="btn" href="https://share.google/9vCVbsVaQVyauzvfV" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+</div>
+</body>
+</html>
